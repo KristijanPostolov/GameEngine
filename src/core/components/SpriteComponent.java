@@ -1,5 +1,7 @@
 package core.components;
 
+import core.filesystem.Files;
+import core.filesystem.ImageDimensions;
 import core.rendering.RenderingLayer;
 
 import javax.imageio.ImageIO;
@@ -34,15 +36,11 @@ public class SpriteComponent extends Component {
         this.imageName = imageName;
         this.renderingLayer = renderingLayer;
         this.orderInLayer = orderInLayer;
-        try {
-            File file = new File(imageName);
-            BufferedImage bufferedImage = ImageIO.read(file);
-            float aspectRatio = bufferedImage.getHeight() / (float) bufferedImage.getWidth();
-            this.width = bufferedImage.getWidth() / pixelsPerUnit;
-            this.height = this.width * aspectRatio;
-        } catch (IOException ex) {
-            throw new IllegalArgumentException("There is no image file with the given imageName");
-        }
+
+        ImageDimensions dimensions = Files.getImageDimensions(imageName);
+        float aspectRatio = dimensions.height / (float) dimensions.width;
+        this.width = dimensions.width / pixelsPerUnit;
+        this.height = this.width * aspectRatio;
     }
 
     public String getImageName() {
