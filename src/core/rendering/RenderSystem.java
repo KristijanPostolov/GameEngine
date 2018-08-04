@@ -27,8 +27,6 @@ public class RenderSystem {
 
             Vector2 center = Camera.worldToViewport(transform.getPosition());
             Vector2 dimensions = Camera.worldToViewport(worldWidth, worldHeight);
-            System.out.println(center);
-            System.out.println(dimensions);
             Vector2 topLeft = new Vector2(center.getX() - dimensions.getX()/2, center.getY() + dimensions.getY()/2);
             Vector2 bottomLeft = new Vector2(center.getX() - dimensions.getX()/2, center.getY() - dimensions.getY()/2);
             Vector2 topRight = new Vector2(center.getX() + dimensions.getX()/2, center.getY() + dimensions.getY()/2);
