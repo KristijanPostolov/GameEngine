@@ -5,6 +5,7 @@ import core.components.Transform;
 import math.Vector2;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class RenderSystem {
@@ -36,14 +37,17 @@ public class RenderSystem {
                     spriteComponent.getRenderingLayer().sortingLayer, spriteComponent.getOrderInLayer());
         }
 
-        Arrays.sort(sprites, (o1, o2) -> {
-            if (o1.renderingLayer == o2.renderingLayer) {
-                if(o1.orderInLayer == o2.orderInLayer) {
-                    return 0;
+        Arrays.sort(sprites, new Comparator<Sprite>() {
+            @Override
+            public int compare(Sprite o1, Sprite o2) {
+                if (o1.renderingLayer == o2.renderingLayer) {
+                    if(o1.orderInLayer == o2.orderInLayer) {
+                        return 0;
+                    }
+                    return o1.orderInLayer < o2.orderInLayer ? -1 : 1;
+                }else {
+                    return o1.renderingLayer < o2.renderingLayer ? -1 : 1;
                 }
-                return o1.orderInLayer < o2.orderInLayer ? -1 : 1;
-            }else {
-                return o1.renderingLayer < o2.renderingLayer ? -1 : 1;
             }
         });
         renderingEngine.update(sprites);

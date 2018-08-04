@@ -2,21 +2,22 @@ package core;
 
 import core.components.SpriteComponent;
 import core.components.Transform;
-import core.rendering.Camera;
-import core.rendering.RenderSystem;
-import core.rendering.ViewBounds;
+import core.rendering.*;
 import math.Vector2;
 
 public class Game {
 
-    public static void main(String[] args) {
-        RenderSystem renderSystem = new RenderSystem(spriteComponents -> {
-            System.out.println("Render");
+    /*public static void main(String[] args) {
+        RenderSystem renderSystem = new RenderSystem(new RenderingEngine() {
+            @Override
+            public void update(Sprite[] sprites) {
+                System.out.println("Render mwahahahaaa");
+            }
         });
 
         Scene scene = getLevel();
         renderSystem.render(scene.getSpriteComponents());
-    }
+    }*/
 
     public static Scene getLevel() {
         ViewBounds world = new ViewBounds(-10, 10, -5, 5);
