@@ -1,5 +1,6 @@
 package core;
 
+import core.components.Behaviour;
 import core.components.SpriteComponent;
 import core.components.Transform;
 
@@ -15,6 +16,7 @@ public class Scene {
 
     private List<Transform> transforms = new ArrayList<>();
     private List<SpriteComponent> spriteComponents = new ArrayList<>();
+    private List<Behaviour> behaviours = new ArrayList<>();
 
     public Scene(String name) {
         this.name = name;
@@ -36,6 +38,7 @@ public class Scene {
 
         gameObjects.put(name, gameObject);
         initializeComponents(gameObject);
+        gameObject.getBehaviour().init();
         return gameObject;
     }
 
@@ -51,9 +54,20 @@ public class Scene {
             spriteComponent.init();
             spriteComponents.add(spriteComponent);
         }
+
+        Behaviour behaviour = gameObject.getBehaviour();
+        if(behaviour != null) {
+            behaviours.add(behaviour);
+        }
     }
 
     public List<SpriteComponent> getSpriteComponents() {
         return spriteComponents;
+    }
+
+    public void updateBehaviours() {
+        for (Behaviour behaviour : behaviours) {
+            behaviour.update();
+        }
     }
 }

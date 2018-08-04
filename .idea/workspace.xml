@@ -7,7 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc44922b-a5f9-49d2-ba45-debdd766df7b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/core/filesystem/Files.java" afterPath="$PROJECT_DIR$/src/core/filesystem/Files.java" />
+      <change beforePath="$PROJECT_DIR$/src/core/Scene.java" afterPath="$PROJECT_DIR$/src/core/Scene.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,15 +55,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Files.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Files.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/core/filesystem/Files.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+            <state relative-caret-position="204">
+              <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
               <folding>
                 <element signature="e#143#144#0" expanded="true" />
                 <element signature="e#188#189#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Scene.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/core/Scene.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="69" column="29" lean-forward="false" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -137,7 +147,6 @@
         <option value="$PROJECT_DIR$/src/core/rendering/Viewbounds.java" />
         <option value="$PROJECT_DIR$/src/math/Vector2.java" />
         <option value="$PROJECT_DIR$/src/core/components/Transform.java" />
-        <option value="$PROJECT_DIR$/src/core/Scene.java" />
         <option value="$PROJECT_DIR$/src/core/components/Components.java" />
         <option value="$PROJECT_DIR$/src/core/GameObjectBuilder.java" />
         <option value="$PROJECT_DIR$/src/core/rendering/Camera.java" />
@@ -153,6 +162,7 @@
         <option value="$PROJECT_DIR$/src/core/components/SpriteComponent.java" />
         <option value="$PROJECT_DIR$/src/core/Game.java" />
         <option value="$PROJECT_DIR$/src/core/filesystem/Files.java" />
+        <option value="$PROJECT_DIR$/src/core/Scene.java" />
       </list>
     </option>
   </component>
@@ -388,12 +398,12 @@
       <workItem from="1532876619964" duration="15252000" />
       <workItem from="1533042793439" duration="18166000" />
       <workItem from="1533081447174" duration="21847000" />
-      <workItem from="1533386722355" duration="9183000" />
+      <workItem from="1533386722355" duration="10111000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64448000" />
+    <option name="totallyTimeSpent" value="65376000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -529,8 +539,8 @@
         <state relative-caret-position="391">
           <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
           <folding>
-            <element signature="e#1059#1060#0" expanded="true" />
-            <element signature="e#1115#1116#0" expanded="true" />
+            <element signature="e#1059#1060#0" expanded="false" />
+            <element signature="e#1115#1116#0" expanded="false" />
             <element signature="e#1145#1146#0" expanded="false" />
             <element signature="e#1172#1173#0" expanded="false" />
             <element signature="e#1202#1203#0" expanded="false" />
@@ -551,6 +561,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -583,6 +594,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -632,14 +644,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/Scene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="51" column="50" lean-forward="true" selection-start-line="51" selection-start-column="50" selection-end-line="51" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/core/components/Transform.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -675,8 +679,8 @@
         <state relative-caret-position="170">
           <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
-            <element signature="e#1059#1060#0" expanded="true" />
-            <element signature="e#1115#1116#0" expanded="true" />
+            <element signature="e#1059#1060#0" expanded="false" />
+            <element signature="e#1115#1116#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -763,12 +767,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/core/filesystem/Files.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+        <state relative-caret-position="204">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
           <folding>
             <element signature="e#143#144#0" expanded="true" />
             <element signature="e#188#189#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="69" column="29" lean-forward="false" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
