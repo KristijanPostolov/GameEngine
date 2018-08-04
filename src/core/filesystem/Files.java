@@ -4,7 +4,7 @@ public class Files {
 
     private static FileSystem fileSystem;
 
-    void setup(FileSystem fileSystem) {
+    public static void setup(FileSystem fileSystem) {
         Files.fileSystem = fileSystem;
     }
 
